@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ionic-angular-instagram": {
+      "hosting": {
+        "app": [
+          "ionic-angular-instagram"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ionic-angular-instagram"
+  }
+}
