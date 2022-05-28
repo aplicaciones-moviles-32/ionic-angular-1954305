@@ -28,7 +28,7 @@
     "@capacitor/status-bar": "1.0.8",
     "@ionic/angular": "^6.0.0",
     "cordova-plugin-camera": "^6.0.0",
-    "firebase": "^9.8.1",
+    "firebase": "^9.8.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "uploadcare-widget": "^3.17.2",
