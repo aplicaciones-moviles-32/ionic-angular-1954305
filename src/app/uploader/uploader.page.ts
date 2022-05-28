@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import uploadcare from 'uploadcare-widget/uploadcare.lang.en.min.js';
 import { UserService } from '../user.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { arrayUnion } from 'firebase/firestore';
 import * as firebase from 'firebase/app';
 
 
@@ -29,7 +30,8 @@ export class UploaderPage implements OnInit {
     const desc = this.desc;
 
     this.afstore.doc(`users/${this.user.getUID}`).update({
-        posts: firestore.FieldValue.arrayUnion({image, desc})
+        // ERROR EN 'firestore'
+        //posts: firebase.firestore.FieldValue.arrayUnion({image, desc})
     });
   }
 
