@@ -1,0 +1,29 @@
+.my-custom-menu {
+  --width: 500px;
+}
+
+.avatar {
+  border-radius: 80%;
+  width: 100px;
+  height: 70px;
+  margin-top: 60px;
+}
+
+.bold {
+  font-weight: 700;
+  display: block;
+
+}
+
+.datos {
+  text-align: center;
+  margin-top: 30px
+}
+
+.usuario {
+  ion-col {
+      display: flex;
+      align-self: center;
+      flex-flow: column;
+  }
+}
