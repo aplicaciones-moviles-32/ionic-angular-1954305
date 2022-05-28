@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonTabs } from '@ionic/angular';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-tabs',
@@ -10,7 +12,7 @@ export class TabsPage implements OnInit {
 
   @ViewChild('tabs') tabs: IonTabs;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     setTimeout(() => { this.tabs.select('feed'); }, 1500);

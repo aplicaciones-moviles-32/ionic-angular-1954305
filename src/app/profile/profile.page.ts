@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AlertController } from '@ionic/angular';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +12,36 @@ import { AlertController } from '@ionic/angular';
 })
 export class ProfilePage implements OnInit {
 
-  constructor(private menu: MenuController, private router: Router, private alert: AlertController) { }
+  userPosts;
+
+  constructor(private menu: MenuController,
+    private router: Router,
+    private alert: AlertController,
+    private afs: AngularFirestore,
+    private user: UserService) {
+      const posts = afs.doc(`users/${user.getUID}`);
+      this.userPosts = posts.valueChanges();
+  }
+
+  bio: String;
+  nombre: String;
+  seguidores: number;
+  siguiendo: number;
+
+  editando: boolean = false;
+
+  nuevoUsuario: String;
+  nuevaPresentacion: String;
+  publicaciones=[];
+
+
+    // this.db.updateNombreUsuario(this.nuevaPresentacion).subscribe(res => { console.log(res); })
+
+  obtenerPublicaciones(): void {
+  //  this.db.getPublicaciones().subscribe(res => {
+  //    console.log(res);
+  //  })
+  }
 
   ngOnInit() {
   }
